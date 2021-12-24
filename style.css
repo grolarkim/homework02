@@ -5,337 +5,277 @@ body{
     margin: 0;
     
 }
+span{
+    font-weight: bold;
+}
 .main_container{
     position: relative;
-
     max-width: 800px;
     min-width: 270px;
-
     min-height: 560px;
-
     width: 100%;
     height: 100%;
-
     margin: auto;
-
-    
-
 }
-header {
-    /* z-index: 2; */
+
+.mobile_header {
     position: fixed;
-    /* left: 0; */
     top: 0;
-
     max-width: 800px;
     width: 100%;
     height: 7vh;
-
     background-color: white;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
     border-bottom: 1px solid #dadada;
 }
-
-.container {
-    /* z-index: 1; */
-    width: 100%;
-    /* height: 100vh; */
-
-    margin: auto;
-    
-
-    padding: 7vh 0;
-
-    /* background-color: green; */
-
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
-}
-
-footer {
-    /* z-index: 3; */
-
-    position: fixed;
-    /* left: 0; */
-    bottom: 0;
-    
-    max-width: 800px;
-    width: 100%;
-    height: 7vh;
-
-    background-color: white;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    border-top: 1px solid #dadada;
-
-
-}
-.post{
-    width: 100%;
-    /* height: 86vh; */
-    border-top: 1px solid #dadada;
-    border-bottom: 1px solid #dadada;
-}
-.icon{
+.mobile_header .icon{
     height: 3vh;
     width: 3vh;
-
     margin: 0 3%;
 }
-#camera{
+.mobile_header #camera{
     background: url('images/camera@3x.png') no-repeat;
     background-position: center;
     background-size: 3vh 3vh;
-
 }
-#insta{
+.mobile_header #insta{
     background: url('images/insta-logo.png') no-repeat;
     background-position: center;
     background-size: 14vh 5vh;
-
-    /* background-color: white; */
     height: 5vh;
     width: 14vh;
-
     margin: 0 20%;
 }
-#message{
+.mobile_header #message{
     background: url('images/dm@3x.png') no-repeat;
     background-position: center;
     background-size: 3vh 3vh;
-
 }
-.foot_btn{
-    /* background-color: white; */
-    height: 3vh;
-    width: 3vh;
 
-    margin: 0 3%;
-}
-#home{
-    background: url('images/home@3x.png') no-repeat;
-    background-position: center;
-    background-size: 3vh 3vh;
 
-}
-#search{
-    background: url('images/search@3x.png') no-repeat;
-    background-position: center;
-    background-size: 3vh 3vh;
 
+.container {
+    width: 100%;
+    margin: auto;
+    padding: 7vh 0;
 }
-#plus{
-    background: url('images/trending@3x.png') no-repeat;
-    background-position: center;
-    background-size: 3vh 3vh;
 
-}
-#like{
-    background: url('images/like@3x.png') no-repeat;
-    background-position: center;
-    background-size: 3vh 3vh;
-
-}
-#home2{
-    background: url('images/home@3x.png') no-repeat;
-    background-position: center;
-    background-size: 3vh 3vh;
-
-}
-.stories{
+.stories_container {
     height: 24vw;
-
     background-color: #f6f6f6;
-
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
-    /* align-items: center; */
-
     margin: 0;
-
     overflow-x: auto;
     overflow-y: hidden;
 }
-.stories::-webkit-scrollbar {
+.stories_container::-webkit-scrollbar {
     display: none;
 }
-.post_head{
-    height: 7vh;
-
-    /* background-color: yellow; */
-    margin: 0;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.post_pic{
-    height: 100vmin;
-    background: url('images/고길동 배경.png') no-repeat;
-    background-position: center;
-    background-size: cover;
-    /* background-color: aqua; */
-}
-.story_wrap{
+.stories_container .story_wrap{
     width: 24vw;
     height: 100%;
-
-    /* background-color: gray; */
     margin: 1vh 1vh 0.5vh;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
-    
 }
-.story_pic{
+.stories_container .story_pic{
     width: 12vw;
     height: 12vw;
     border-radius: 50%;
     padding: 2px;
-
     border: 2px solid #dadada;
-
     background: url('images/고길동 프사.png') no-repeat;
     background-position: center;
     background-size: cover;
-    /* background-color: green; */
 }
-.border_gradation{
+.stories_container .border_gradation{
     border: 2px solid transparent;
     background-image: url('images/둘리.png'), linear-gradient(white, white), linear-gradient(45deg, #faaf6a,  #cc4fa4);
     background-origin: border-box;
     background-clip: content-box, padding-box,border-box;
 }
-.story_name{
+.stories_container .story_name{
     font-size: 0.7rem;
     text-align: center;
     margin-top: 1px;
     width: 100%;
 }
-.post_title{
+
+
+
+
+.post_container {
+    width: 100%;
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+}
+.post_container .icon{
+    height: 3vh;
+    width: 3vh;
+    margin: 0 3%;
+}
+
+
+
+.post_container .post_head {
+    height: 7vh;
+    margin: 0;
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
+    justify-content: space-between;
     align-items: center;
-
+}
+.post_container .post_head .post_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 30vh;
     height: 6vh;
-
     margin: 0 3%;
-
 }
-.title_pic{
+.post_container .post_head .post_title .title_pic{
     width: 4vh;
     height: 4vh;
     border-radius: 50%;
-    /* background-color: green; */
-
     background: url('images/고길동 프사.png') no-repeat;
     background-position: center;
     background-size: cover;
-
-    
-
-
 }
-.title_name{
+.post_container .post_head .post_title .title_name{
     font-size: 1rem;
     margin-left: 1vh;
-    
-
 }
-.more{
-    
+.post_container .post_head .more{    
     background: url('images/more@3x.png') no-repeat;
     background-position: center;
     background-size: contain;
-
-
 }
-.post_btns{
+
+
+
+.post_container .post_pic{
+    height: 100vmin;
+    background: url('images/고길동 배경.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.post_container .post_wrap {
+    width: 100%;
+}
+
+.post_container .post_wrap .post_btns{
     width: 100%;
     height: 6vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
-    /* background-color: yellow; */
-
 }
-.like_reply_message{
+.post_container .post_wrap .post_btns .like_reply_message{
     width: 40%;
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     align-items: center;
     margin: 0 3%;
-
 }
-.heart{
+.post_container .post_wrap .post_btns .like_reply_message .heart{
     background: url('images/like@3x.png') no-repeat;
     background-position: center;
     background-size: 3vh 3vh;
     margin-left: 0;
 }
-.re{
+.post_container .post_wrap .post_btns .like_reply_message .re{
     background: url('images/comment@3x.png') no-repeat;
     background-position: center;
     background-size: 3vh 3vh;
 }
-.mess{
+.post_container .post_wrap .post_btns .like_reply_message .mess{
     background: url('images/dm@3x.png') no-repeat;
     background-position: center;
     background-size: 3vh 3vh;
 }
-.bookmark{
+.post_container .post_wrap .post_btns .bookmark{
     background: url('images/favorite@3x.png') no-repeat;
     background-position: center;
     background-size: 3vh 3vh;
 }
-.likes{
+
+
+.post_container .post_wrap .likes {
     width: 100%;
     height: 4vh;
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
     align-items: center;
-    /* background-color: blue; */
 }
-.like_pic{
+.post_container .post_wrap .likes .like_pic{
     width: 3vh;
     height: 3vh;
     border-radius: 50%;
-    /* background-color: red; */
     margin-left: 3vw;
     margin-right: 1vw;
     background: url('images/둘리.png') no-repeat;
     background-position: center;
     background-size: cover;
 }
-.reply{
+.post_container .post_wrap .reply{
     margin-left: 3vw;
 }
-.time{
+.post_container .post_wrap .time{
     margin-left: 3vw;
     font-size: 0.7rem;
     color: gray;
     margin-top: 5vh;
 }
-span{
-    font-weight: bold;
+
+
+.mobile_footer {
+    position: fixed;
+    bottom: 0;
+    max-width: 800px;
+    width: 100%;
+    height: 7vh;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #dadada;
+}
+.mobile_footer  .foot_btn{
+    height: 3vh;
+    width: 3vh;
+    margin: 0 3%;
+}
+.mobile_footer #home{
+    background: url('images/home@3x.png') no-repeat;
+    background-position: center;
+    background-size: 3vh 3vh;
+}
+.mobile_footer #search{
+    background: url('images/search@3x.png') no-repeat;
+    background-position: center;
+    background-size: 3vh 3vh;
+}
+.mobile_footer #plus{
+    background: url('images/trending@3x.png') no-repeat;
+    background-position: center;
+    background-size: 3vh 3vh;
+}
+.mobile_footer #like{
+    background: url('images/like@3x.png') no-repeat;
+    background-position: center;
+    background-size: 3vh 3vh;
+}
+.mobile_footer #home2{
+    background: url('images/home@3x.png') no-repeat;
+    background-position: center;
+    background-size: 3vh 3vh;
 }
